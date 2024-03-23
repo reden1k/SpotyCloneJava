@@ -1,0 +1,174 @@
+body {
+    background-color: #131313;
+}
+
+.image {
+    position: fixed;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spotik-icon {
+    height: 290px;
+    width: 290px;
+}
+
+.btn {
+    width: 215px;
+    height: 50px;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: "lucida sans unicode";
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+  }
+
+
+
+.glow-on-hover {
+    position: fixed;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #0f0f0f;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #4f0063, #7607a1, #562aa7, #8242c5, #9460be);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 5s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1b1b1b; 
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.text {
+    width: 215px;
+    height: 50px;
+    position: absolute;
+    color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    transition: top 0.7s;
+    -moz-transition: top 0.7s; 
+    -webkit-transition: top 0.7s;
+    -o-transition: top 0.7s; 
+    -ms-transition: top 0.7s;
+  }
+  
+  .btn:hover .primary {
+    top: -80px;
+  }
+  
+  .btn:hover .secondary {
+    top: 0px;
+  }
+  
+  .btn:hover .new {
+    top: 80px;
+  }
+  
+  .primary {
+    top: 0px;
+  }
+  
+  .secondary {
+    top: 80px;
+  }
+  
+  .new {
+    top: 160px;
+  }
+  
+  .btn.clicked .primary {
+    top: -80px;
+  }
+  
+  .btn.clicked .secondary {
+    top: -160px;
+  }
+  
+  .btn.clicked .new {
+    top: 0px;
+  }
+
+  .btn.unclicked .primary {
+    top: 0px;
+    transition: top 0s;
+    -moz-transition: top 0s; 
+    -webkit-transition: top 0s;
+    -o-transition: top 0s; 
+    -ms-transition: top 0s;
+  }
+
+  .btn.unclicked .secondary {
+    top: 80px;
+    transition: top 0s;
+    -moz-transition: top 0s; 
+    -webkit-transition: top 0s;
+    -o-transition: top 0s; 
+    -ms-transition: top 0s;
+  }
+  
+  .btn.unclicked .new {
+    top: 160px;
+    transition: top 0s;
+    -moz-transition: top 0s; 
+    -webkit-transition: top 0s;
+    -o-transition: top 0s; 
+    -ms-transition: top 0s;
+  }
