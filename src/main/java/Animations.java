@@ -1,8 +1,8 @@
 public class Animations {
     public static void addingSongs() throws InterruptedException {
-        int numDots = 3; // Количество точек в анимации
-        int repetitions = 3; // Количество повторений анимации
-        int delay = 100; // Задержка между кадрами анимации в миллисекундах
+        int numDots = 3;
+        int repetitions = 3;
+        int delay = 100;
 
         for (;;) {
             System.out.print("Adding songs");
@@ -15,9 +15,9 @@ public class Animations {
     }
 
     public static void deletingSongs() throws InterruptedException {
-        int numDots = 3; // Количество точек в анимации
-        int repetitions = 3; // Количество повторений анимации
-        int delay = 100; // Задержка между кадрами анимации в миллисекундах
+        int numDots = 3;
+        int repetitions = 3;
+        int delay = 100;
 
         for (;;) {
             System.out.print("Deleting songs");
@@ -42,7 +42,7 @@ public class Animations {
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
-                System.err.println("Произошло прерывание потока: " + e.getMessage());
+                System.err.println("Failed loading: " + e.getMessage());
             }
         }
 

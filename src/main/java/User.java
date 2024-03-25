@@ -146,7 +146,11 @@ public class User {
 
     public static void deleteTemporaryFiles() throws IOException {
         Path[] paths = {Paths.get(DELETE_PATH), Paths.get(ADD_PATH)};
-        Files.delete(paths[0]);
-        Files.delete(paths[1]);
+        if (Files.exists(paths[0])) {
+            Files.delete(paths[0]);
+        }
+        if (Files.exists(paths[1])) {
+            Files.delete(paths[1]);
+        }
     }
 }

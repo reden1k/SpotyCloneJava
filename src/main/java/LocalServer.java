@@ -10,7 +10,7 @@ import java.net.InetSocketAddress;
 
 public class LocalServer {
 
-    private static final String FOLDER_PATH = "src/main/resources/frontend";
+    private static final String FOLDER_PATH = "frontend";
     static HttpServer LocalServer;
 
     public static void start() throws Exception {

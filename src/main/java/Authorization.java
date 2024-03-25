@@ -26,7 +26,7 @@ public class Authorization {
                     "user-library-read%20playlist-modify-public%20playlist-modify-private";
             Desktop d = Desktop.getDesktop();
             d.browse(new URI(url));
-            System.out.println("Enter the authorization code from the callback URL:");
+            System.out.println("Click on the button in the window that opens and then paste it here (CTRL + SHIT + V):");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             return validateURL(reader.readLine().trim());
     }

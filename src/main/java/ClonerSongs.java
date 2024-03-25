@@ -16,9 +16,6 @@ public class ClonerSongs {
         }
         deleteSongs();
         addSongs();
-
-        User.deleteTemporaryFiles();
-        Animations.finishAnimation();
     }
 
     public static void addSongs() throws IOException, InterruptedException {
